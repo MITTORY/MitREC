@@ -230,6 +230,16 @@
 
             <Border CornerRadius="25 25 0 0" Background="#191919" Grid.Row="0" Margin="0,0,0,147" Grid.RowSpan="2">
                 <Grid>
+                    <TextBlock x:Name="TimeLable" Text="Время записи: " FontFamily="Srbija Sans" FontSize="20" Margin="101,0,1025,0" TextAlignment="Center" VerticalAlignment="Center" Foreground="White" Visibility="Hidden"/>
+                    <TextBlock x:Name="durationTextBlock" FontFamily="Srbija Sans" FontSize="20" Margin="253,0,696,0" TextAlignment="Left" VerticalAlignment="Center" Visibility="Hidden">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush StartPoint="0,2" EndPoint="1,0">
+                                <GradientStop Color="Red" Offset="0.0"/>
+                                <GradientStop Color="#FF007ACC" Offset="0.5"/>
+                                <GradientStop Color="Red" Offset="0.9"/>
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
                     <Image x:Name="Logo" Source="/ICON2.png" Margin="-10,-21,1170,-16"/>
                     <TextBlock x:Name="NameApp" Text="MITREC" FontSize="50" TextAlignment="Center" FontFamily="Srbija Sans" Height="50" Margin="585,2,491,7">
                         <TextBlock.Foreground>
@@ -287,8 +297,8 @@
                                     <DropShadowEffect ShadowDepth="1" BlurRadius="2" Color="MediumPurple"/>
                                 </TextBlock.Effect>
                             </TextBlock>
-                            <TextBlock Text="FPS" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="15" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,81,0,0" Width="264" Height="18"/>
-                            <TextBlock Text="Качество" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="15" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,39,0,0" Width="266" Height="18"/>
+                            <TextBlock Text="Расширение для звука" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="15" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,81,0,0" Width="264" Height="18"/>
+                            <TextBlock Text="Качество видео" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="15" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,39,0,0" Width="266" Height="18"/>
 
                             <ComboBox x:Name="videoQualityBox" VerticalAlignment="Top" Margin="10,57,10,0" HorizontalContentAlignment="Center" FontFamily="Srbija Sans">
                                 <ComboBoxItem Content="360p"/>
@@ -296,9 +306,9 @@
                                 <ComboBoxItem Content="1080p"/>
                             </ComboBox>
 
-                            <ComboBox x:Name="videoFpsBox" VerticalAlignment="Top" Margin="10,99,10,0" HorizontalContentAlignment="Center" FontFamily="Srbija Sans">
-                                <ComboBoxItem Content="30 FPS"/>
-                                <ComboBoxItem Content="60 FPS"/>
+                            <ComboBox x:Name="audioBox" VerticalAlignment="Top" Margin="10,99,10,0" HorizontalContentAlignment="Center" FontFamily="Srbija Sans">
+                                <ComboBoxItem Content=".wav"/>
+                                <ComboBoxItem Content=".mp3"/>
                             </ComboBox>
                         </Grid>
                     </Border>
@@ -315,8 +325,6 @@
                             <Button x:Name="DeveloperButton" Content="О разработчике"  Style="{StaticResource InfoButtonStyle}" FontFamily="Bahnschrift" FontSize="10" Margin="10,82,10,19" Click="DeveloperButton_Click"/>
                         </Grid>
                     </Border>
-
-
                 </Grid>
             </Border>
         </Grid>
