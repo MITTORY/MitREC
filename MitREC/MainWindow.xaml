@@ -1,0 +1,324 @@
+﻿<Window x:Class="MitREC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MitREC"
+        mc:Ignorable="d"
+        Height="210" Width="1280" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" WindowStyle="None" 
+        AllowsTransparency="True" Background="Transparent" 
+        MouseDown="Border_MouseDown" Icon="/icontray.png">
+
+    <Window.Resources>
+
+        <Style x:Key="MacOSExitButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Red" />
+            <Setter Property="Foreground" Value="#333333" />
+            <Setter Property="FontFamily" Value="Srbija Sans" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="8,4" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse x:Name="ButtonBackground" Fill="Red" Width="45" Height="45"/>
+                            <ContentPresenter x:Name="ButtonContent" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBackground" Property="Fill" Value="#AA0000" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonBackground" Property="Fill" Value="#550000" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MacOSCollapseButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#0070C9" />
+            <Setter Property="Foreground" Value="#333333" />
+            <Setter Property="FontFamily" Value="Srbija Sans" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="8,4" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse x:Name="ButtonBackground" Fill="#0070C9" Width="25" Height="25" StrokeThickness="1"/>
+                            <ContentPresenter x:Name="ButtonContent" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBackground" Property="Fill" Value="#004A86" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonBackground" Property="Fill" Value="#002543" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RecordPlayButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF2E2E2E" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="#FF007ACC" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="MinWidth" Value="100" />
+            <Setter Property="MinHeight" Value="40" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5"/>
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#212121" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF007ACC" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#191919" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="#11328C" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RecordStopButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF2E2E2E" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="Red" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="MinWidth" Value="100" />
+            <Setter Property="MinHeight" Value="40" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5"/>
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#212121" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="Red" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#191919" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="#BF3030" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="OpenButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF2E2E2E" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="#999999" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="MinWidth" Value="0" />
+            <Setter Property="MinHeight" Value="0" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5"/>
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#212121" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="Gray" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#191919" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="#272727" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="InfoButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF2E2E2E" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="#999999" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="MinWidth" Value="0" />
+            <Setter Property="MinHeight" Value="0" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5"/>
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#212121" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="Gray" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#191919" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="#272727" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border BorderThickness="2" CornerRadius="25">
+
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                <GradientStop Color="#FF007ACC" Offset="0.0"/>
+                <GradientStop Color="Red" Offset="0.3"/>
+                <GradientStop Color="Red" Offset="0.5"/>
+                <GradientStop Color="#FF007ACC" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="25 25 0 0" Background="#191919" Grid.Row="0" Margin="0,0,0,147" Grid.RowSpan="2">
+                <Grid>
+                    <Image x:Name="Logo" Source="/ICON2.png" Margin="-10,-21,1170,-16"/>
+                    <TextBlock x:Name="NameApp" Text="MITREC" FontSize="50" TextAlignment="Center" FontFamily="Srbija Sans" Height="50" Margin="585,2,491,7">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush StartPoint="0,2" EndPoint="1,0">
+                                <GradientStop Color="Red" Offset="0.0"/>
+                                <GradientStop Color="#FF007ACC" Offset="0.5"/>
+                                <GradientStop Color="Red" Offset="0.9"/>
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <Button x:Name="ExitButton" Style="{StaticResource MacOSExitButtonStyle}" Height="45" Width="45" Margin="1221,7,10,7" Click="ExitButton_Click"/>
+                    <Button x:Name="CollapseButton" Style="{StaticResource MacOSCollapseButtonStyle}" Height="25" Width="25" Margin="1191,19,60,15" Click="CollapseButton_Click"/>
+                </Grid>
+            </Border>
+
+            <Border CornerRadius="0 0 25 25" Background="#212121" Grid.Row="1">
+                <Grid>
+
+                    <Border Margin="0,0,1100,10" Background="#191919" CornerRadius="0 0 25 25">
+                        <Grid>
+                            <Button x:Name="RecButton" Content="Запись" Style="{StaticResource RecordPlayButtonStyle}" FontFamily="Srbija Sans" FontSize="15" Margin="0,10,0,77" Width="150" Height="50" HorizontalAlignment="Center" Click="RecButton_Click"/>
+                            <Button x:Name="StopButton" Content="Стоп" Style="{StaticResource RecordStopButtonStyle}" FontFamily="Srbija Sans" FontSize="15" Margin="0,77,0,10" Width="150" Height="50" HorizontalAlignment="Center" Click="StopButton_Click"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Margin="181,0,735,10" Background="#191919" CornerRadius="0 0 25 25">
+                        <Grid>
+                            <TextBlock Text="Объект записи" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="25" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="360">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" BlurRadius="2" Color="MediumPurple"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <CheckBox x:Name="CheckBoxDesktop" Content="Рабочий стол" FontFamily="Srbija Sans" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Center"  VerticalContentAlignment="Center" FontSize="18" Height="22" Margin="0,42,0,0" Checked="CheckBoxDesktop_Checked"/>
+                            <CheckBox x:Name="CheckBoxWindow" Content="Окно" FontFamily="Srbija Sans" Foreground="White" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="18" Height="20" Margin="0,65,0,0" Checked="CheckBoxWindow_Checked"/>
+                            <ComboBox x:Name="ComboBoxWindow" HorizontalContentAlignment="Center" Margin="0,90,0,0" HorizontalAlignment="Center" IsEnabled="False" Width="340" VerticalAlignment="Top" FontSize="15" Height="30" DropDownOpened="ComboBoxWindow_DropDownOpened"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Margin="816,0,110,10" Background="#191919" CornerRadius="0 0 25 25">
+                        <Grid>
+                            <TextBox x:Name="SaveRoad" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Margin="0,47,0,0" Height="23" IsEnabled="False" FontFamily="Bahnschrift SemiCondensed"/>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Путь для сохранения" Foreground="White" FontFamily="Srbija Sans" FontSize="25" Width="350">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" BlurRadius="2" Color="MediumPurple"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <Button x:Name="OpenButton" Content="Открыть"  Style="{StaticResource OpenButtonStyle}" FontFamily="Bahnschrift" FontSize="18" Margin="120,85,120,10" Click="OpenButton_Click"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Background="#191919" CornerRadius="0 0 25 25" Margin="546,0,465,10">
+                        <Grid>
+                            <TextBlock Text="НАСТРОЙКИ" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="25" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="265" Height="25">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" BlurRadius="2" Color="MediumPurple"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+                            <TextBlock Text="FPS" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="15" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,81,0,0" Width="264" Height="18"/>
+                            <TextBlock Text="Качество" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="15" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,39,0,0" Width="266" Height="18"/>
+
+                            <ComboBox x:Name="videoQualityBox" VerticalAlignment="Top" Margin="10,57,10,0" HorizontalContentAlignment="Center" FontFamily="Srbija Sans">
+                                <ComboBoxItem Content="360p"/>
+                                <ComboBoxItem Content="720p"/>
+                                <ComboBoxItem Content="1080p"/>
+                            </ComboBox>
+
+                            <ComboBox x:Name="videoFpsBox" VerticalAlignment="Top" Margin="10,99,10,0" HorizontalContentAlignment="Center" FontFamily="Srbija Sans">
+                                <ComboBoxItem Content="30 FPS"/>
+                                <ComboBoxItem Content="60 FPS"/>
+                            </ComboBox>
+                        </Grid>
+                    </Border>
+
+                    <Border Margin="1171,0,0,10" Background="#191919" CornerRadius="0 0 25 25">
+                        <Grid>
+                            <TextBlock Text="ИНФО" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="25" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="85" Height="25">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect ShadowDepth="1" BlurRadius="2" Color="MediumPurple"/>
+                                </TextBlock.Effect>
+                            </TextBlock>
+
+                            <Button x:Name="InfoButton" Content="О приложении"  Style="{StaticResource InfoButtonStyle}" FontFamily="Bahnschrift" FontSize="10" Margin="10,42,10,59" Click="InfoButton_Click"/>
+                            <Button x:Name="DeveloperButton" Content="О разработчике"  Style="{StaticResource InfoButtonStyle}" FontFamily="Bahnschrift" FontSize="10" Margin="10,82,10,19" Click="DeveloperButton_Click"/>
+                        </Grid>
+                    </Border>
+
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
