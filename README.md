@@ -55,4 +55,7 @@ Fraps программа довольно старая, последнее об�
 
 ## Демо
 <image src="[https://picsum.photos/800/600](https://imgur.com/nEXTbfY)https://imgur.com/nEXTbfY" alt="Демо версия программы">
+<kbd>
+  <img src="https://imgur.com/nEXTbfY"/>
+</kbd>
 
