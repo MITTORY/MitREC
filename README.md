@@ -6,5 +6,6 @@
 
 ## Диаграмма компонентов
 Файл: https://cloud.mail.ru/public/iMKy/ek985VYad </br>
-Изображение: https://cloud.mail.ru/public/3Qd7/NPdb4D4yb
-![Без имени](https://github.com/MITTORY/MitREC/assets/40243680/6c09587d-c4b0-45bb-8e07-d6848c7ec617)
+Изображение: https://cloud.mail.ru/public/3Qd7/NPdb4D4yb </br>
+![Диаграмма компонентов](https://github.com/MITTORY/MitREC/assets/40243680/075f0228-075c-4f7a-99dc-d492033c7485)
+
