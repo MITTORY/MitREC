@@ -1,4 +1,3 @@
-# Ссылки на диаграммы/модели
 ## Пояснительная модель
 Файл: [https://cloud.mail.ru/public/NVSx/NwuRjG3nt](https://cloud.mail.ru/public/NVSx/NwuRjG3nt) </br>
 Фото: [https://cloud.mail.ru/public/zNgw/VF3XvQRmh](https://cloud.mail.ru/public/zNgw/VF3XvQRmh) </br>
