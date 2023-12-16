@@ -11,3 +11,5 @@
 ## Концептуальная модель
 ![КонцептуальнаяМодель](https://github.com/MITTORY/MitREC/assets/40243680/067bb614-a559-497c-b679-db82bd2239de)
 
+## Диаграмма классов
+![Диаграмма классов](https://github.com/MITTORY/MitREC/assets/40243680/2ed2f946-06a8-425b-b9b7-9b2f466b55ac)
