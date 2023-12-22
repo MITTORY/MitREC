@@ -11,3 +11,4 @@
 ![КонцептуальнаяМодель](https://github.com/MITTORY/MitREC/assets/40243680/7ab6fcf0-7f01-4953-b9cc-72fbdca30ca3)
 
 ## Диаграмма классов
+![Диаграмма классов drawio](https://github.com/MITTORY/MitREC/assets/40243680/6738af88-bb05-4836-9b3d-160030d6d275)
