@@ -2,7 +2,7 @@
 ![photo_2023-10-28_19-50-12](https://github.com/MITTORY/MitREC/assets/40243680/fa391c6f-92f5-49b7-8c4b-733adefbec1c)
 
 ## Диаграмма компонентов
-![Диаграмма компонентов](https://github.com/MITTORY/MitREC/assets/40243680/0fdd2361-0c9f-41ee-ae7d-c5a655902ac7)
+![Диаграмма компонентов](https://github.com/MITTORY/MitREC/assets/40243680/ce775151-9f78-4aea-843a-ca71b58bb9f3)
 
 ## Use Case
 ![Use case](https://github.com/MITTORY/MitREC/assets/40243680/cf1cfb46-00af-4839-9591-f013fe8a00c6)
