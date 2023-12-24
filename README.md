@@ -5,7 +5,7 @@
 ![Диаграмма компонентов](https://github.com/MITTORY/MitREC/assets/40243680/ce775151-9f78-4aea-843a-ca71b58bb9f3)
 
 ## Use Case
-![Use case](https://github.com/MITTORY/MitREC/assets/40243680/cf1cfb46-00af-4839-9591-f013fe8a00c6)
+![Use case](https://github.com/MITTORY/MitREC/assets/40243680/872a3e16-1d58-4975-a689-f845dba9fd77)
 
 ## Концептуальная модель
 ![КонцептуальнаяМодель](https://github.com/MITTORY/MitREC/assets/40243680/7ab6fcf0-7f01-4953-b9cc-72fbdca30ca3)
