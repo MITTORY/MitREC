@@ -1,0 +1,89 @@
+﻿<Window x:Class="MitREC.InstructionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MitREC"
+        mc:Ignorable="d"
+        Height="450" Width="450"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" WindowStyle="None" 
+        AllowsTransparency="True" Background="Transparent">
+
+    <Window.Resources>
+        <Style x:Key="OpenButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF2E2E2E" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="#999999" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="MinWidth" Value="0" />
+            <Setter Property="MinHeight" Value="0" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5"/>
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#212121" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="Gray" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#191919" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="#272727" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border Name="FullBody" BorderThickness="2" CornerRadius="25" Background="#212121">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                <GradientStop Color="#111111" Offset="0.0"/>
+                <GradientStop Color="#191919" Offset="0.25"/>
+                <GradientStop Color="#212121" Offset="0.5"/>
+                <GradientStop Color="#191919" Offset="0.75"/>
+                <GradientStop Color="#111111" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+
+        <Grid>
+
+            <TextBlock Text="Инструкция" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Srbija Sans" FontSize="35" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="266" Height="35">
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="2" BlurRadius="3" Color="Red"/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+            <Border Margin="15,50,15,60" CornerRadius="15" Background="White">
+                <Border.Effect>
+                    <DropShadowEffect Color="Red" ShadowDepth="5" BlurRadius="15"/>
+                </Border.Effect>
+                
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="Шаг 1. Выберите путь для сохранения." TextAlignment="Center" TextWrapping="Wrap" FontSize="20" FontFamily="Bahnschrift SemiCondensed" Margin="10,10,10,302"/>
+                    <TextBlock Text="Шаг 2. Выберите качество видео (низкое, среднее, высокое) или оставьте по умолчанию." TextAlignment="Center" TextWrapping="Wrap" FontSize="20" FontFamily="Bahnschrift SemiCondensed" Margin="10,39,10,250"/>
+                    <TextBlock Text="Шаг 3. Выберите расширение для звукового и видео файла или оставьте по умолчанию." TextAlignment="Center" TextWrapping="Wrap" FontSize="20" FontFamily="Bahnschrift SemiCondensed" Margin="10,92,10,195"/>
+                    <TextBlock Text="Шаг 4. Выберите дисплей или оставьте по умолчанию." TextAlignment="Center" TextWrapping="Wrap" FontSize="20" FontFamily="Bahnschrift SemiCondensed" Margin="10,146,10,142"/>
+                    <TextBlock Text="Шаг 5. Нажмите кнопку 'Запись' или клавишу F9 по умолчанию для начала записи." TextAlignment="Center" TextWrapping="Wrap" FontSize="20" FontFamily="Bahnschrift SemiCondensed" Margin="10,199,10,89"/>
+                    <TextBlock Text="Шаг 6. Нажмите кнопку 'Стоп' или клавишу F12 по умолчанию для остановки записи." TextAlignment="Center" TextWrapping="Wrap" FontSize="20" FontFamily="Bahnschrift SemiCondensed" Margin="10,252,10,36"/>
+                    <TextBlock Text="Вы можете изменить горячие клавиши в окне настроек горячих клавиш." TextAlignment="Center" TextWrapping="Wrap" FontSize="13" FontFamily="Bahnschrift SemiCondensed" Margin="10,310,10,10"/>
+                </Grid>
+            </Border>
+
+            <Button x:Name="OkButton" Margin="148,401,148,10" Content="OK" FontFamily="Bahnschrift" FontSize="16" Style="{StaticResource OpenButtonStyle}" Click="OkButton_Click"/>
+
+        </Grid>
+    </Border>
+</Window>

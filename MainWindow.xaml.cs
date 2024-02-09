@@ -59,7 +59,7 @@ namespace MitREC
             //Список для хранения информации о дисплеях
             List<DisplayInfo> displayInfoList = new List<DisplayInfo>();
 
-            //Список дисплеев
+            //Получение списка доступных дисплеев
             foreach (Screen screen in Screen.AllScreens)
             {
                 displayInfoList.Add(new DisplayInfo
@@ -81,7 +81,7 @@ namespace MitREC
                 DisplayBox.SelectedIndex = 0; 
             }
         }
-
+        
         // Основное
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -178,12 +178,10 @@ namespace MitREC
                         switch (selectedAudio)
                         {
                             case ".wav":
-                                // Создаем файл .wav для записи аудио
                                 string fileNameAudioWav = "audio_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + selectedAudio;
                                 writer = new WaveFileWriter(Path.Combine(savePath, fileNameAudioWav), waveIn.WaveFormat);
                                 break;
                             case ".mp3":
-                                // Создаем файл .mp3 для записи аудио
                                 string fileNameAudioMp3 = "audio_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + selectedAudio;
                                 writer = new WaveFileWriter(Path.Combine(savePath, fileNameAudioMp3), waveIn.WaveFormat);
                                 break;
