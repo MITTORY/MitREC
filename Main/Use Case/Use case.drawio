@@ -1,0 +1,90 @@
+<mxfile host="Electron" modified="2023-12-24T09:29:03.386Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="C87UjPEdv3C3xgWCwJvZ" version="22.1.2" type="device">
+  <diagram name="Страница — 1" id="IAghGAUe6PFrIIy-X0gz">
+    <mxGraphModel dx="1418" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="QzZAqwoZvvpJWtsxZq0g-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="339" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-1" value="Пользователь&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="70" y="264" width="75" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="uYL6lTgFc7LsaqJJSi9O-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="QzZAqwoZvvpJWtsxZq0g-2" target="QzZAqwoZvvpJWtsxZq0g-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uYL6lTgFc7LsaqJJSi9O-26" value="include" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="uYL6lTgFc7LsaqJJSi9O-22">
+          <mxGeometry x="0.0087" y="1" relative="1" as="geometry">
+            <mxPoint x="41" y="-33" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uYL6lTgFc7LsaqJJSi9O-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="QzZAqwoZvvpJWtsxZq0g-2" target="QzZAqwoZvvpJWtsxZq0g-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="311" />
+              <mxPoint x="330" y="279" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uYL6lTgFc7LsaqJJSi9O-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="QzZAqwoZvvpJWtsxZq0g-2" target="QzZAqwoZvvpJWtsxZq0g-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="332" y="400" />
+              <mxPoint x="370" y="400" />
+              <mxPoint x="370" y="399" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uYL6lTgFc7LsaqJJSi9O-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="QzZAqwoZvvpJWtsxZq0g-2" target="QzZAqwoZvvpJWtsxZq0g-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-2" value="Запись экрана" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="299" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-4" value="Выбор расширения звука" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="119" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-5" value="Выбор расширения видео" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="239" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-6" value="Выбор водяного знака" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="359" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-7" value="Выбор дисплея" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="479" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="QzZAqwoZvvpJWtsxZq0g-21" target="QzZAqwoZvvpJWtsxZq0g-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-23" value="extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QzZAqwoZvvpJWtsxZq0g-22" vertex="1" connectable="0">
+          <mxGeometry x="-0.12" y="2" relative="1" as="geometry">
+            <mxPoint y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-21" value="Подключенное устройство для захвата звука" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="119" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="QzZAqwoZvvpJWtsxZq0g-24" target="QzZAqwoZvvpJWtsxZq0g-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-24" value="Имеется несколько дисплеев" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="479" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QzZAqwoZvvpJWtsxZq0g-26" value="extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="550" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="uYL6lTgFc7LsaqJJSi9O-27" value="include" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="350" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="uYL6lTgFc7LsaqJJSi9O-28" value="include" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="350" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="uYL6lTgFc7LsaqJJSi9O-29" value="include" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="330" y="530" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
