@@ -12,3 +12,6 @@
 
 ## Диаграмма классов
 ![Диаграмма классов drawio](https://github.com/MITTORY/MitREC/assets/40243680/6738af88-bb05-4836-9b3d-160030d6d275)
+
+## BPMN
+![Диаграмма без названия](https://github.com/MITTORY/MitREC/assets/40243680/b032c269-2f05-46a5-bcab-1ac98a2a70eb)
