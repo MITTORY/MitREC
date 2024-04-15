@@ -1,5 +1,6 @@
 ## Скачать и протестировать:
-![download]([https://github.com/MITTORY/MitREC/assets/40243680/baf2f474-8244-4a24-98d4-58a1ebb954ac])
+![download](https://github.com/MITTORY/MitREC/assets/40243680/530a1fed-8764-48b5-9205-4f6610d68fe4)
+
 
 
 ## Пояснительная модель
