@@ -1,5 +1,6 @@
-Скачать и протестировать:
-https://disk.yandex.ru/d/-hyqMx8IGqrpxg
+##Скачать и протестировать:
+![download]([https://github.com/MITTORY/MitREC/assets/40243680/baf2f474-8244-4a24-98d4-58a1ebb954ac](https://disk.yandex.ru/d/-hyqMx8IGqrpxg))
+
 
 ## Пояснительная модель
 ![photo_2023-10-28_19-50-12](https://github.com/MITTORY/MitREC/assets/40243680/fa391c6f-92f5-49b7-8c4b-733adefbec1c)
