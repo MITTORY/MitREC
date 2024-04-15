@@ -1,5 +1,5 @@
 ## Скачать и протестировать:
-![download](https://github.com/MITTORY/MitREC/assets/40243680/530a1fed-8764-48b5-9205-4f6610d68fe4)
+![download](https://disk.yandex.ru/d/-hyqMx8IGqrpxg)
 
 
 
